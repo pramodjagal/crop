@@ -1,0 +1,262 @@
+// Place all the styles related to the builder controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'foundation_and_overrides';
+
+//common css
+.blueText{
+  color: #2274A6;
+}
+.headTitle{
+  color: #B4B9BD;
+}
+.subtitle{
+  color: #35393d;
+}
+
+select, select:hover{
+  background: url(dropdown_arrow.gif) right center no-repeat #fff !important;
+}
+//header css
+.header-top-margin{
+  margin-top:0.7em;
+}
+.header-greybar{
+  background-color: #D2D5D7;
+  height:5px;
+  margin: 0.7em 0em 1.1em 0em;
+}
+
+.guidedImg ul li{
+  margin: 0.5em 0em 0em;
+  padding: 0;
+  color: #E2710A;
+}
+.guidedImg ul li.selected{
+  color: white;
+}
+.guidedImg ul li img{
+  margin-left:0.25em;
+}
+.step-choosesize{
+  background: url(large_ga_size_notext.jpg) left top no-repeat;
+}
+.step-choosephoto{
+  background: url(large_ga_photo_notext.jpg) left top no-repeat;
+}
+.step-edit{
+  background: url(large_ga_edit_notext.jpg) left top no-repeat;
+}
+.step-cart{
+  background: url(large_ga_cart_notext.jpg) left top no-repeat;
+}
+.guidedImg {
+  background-size:100% 44px;
+  height:44px;
+}
+//first page css
+
+.dividerRow1,.dividerRow2, .dividerRow3{
+  height:10px;
+}
+
+.landscape ul li{
+  height:132px;
+  position: relative;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+.portrait ul li{
+  position: relative;
+  height:190px;
+}
+.landscape ul li div:first-child, .portrait ul li div:first-child
+{
+  background-color: #F0F1F1;
+  border: 1px solid #D2D5D7;
+  margin-left:27px;
+  position: absolute;
+  bottom: 80px;
+}
+.landscape ul li div:first-child:hover, .portrait ul li div:first-child:hover, #iconsdiv .selected
+{
+  border: 2px solid #E2710A;
+}
+
+.landscape .icon_11x14{
+  width:41px;
+  height:31px;
+ }
+.landscape .icon_12x18{
+  width:54px;
+  height:35px;
+}
+.landscape .icon_16x20{
+  width:59px;
+  height:46px;
+}
+.landscape .icon_20x30{
+  width:88px;
+  height:58px;
+}
+.landscape .icon_24x36{
+  width:105px;
+  height:70px;
+}
+.portrait .icon_11x14{
+  width:31px;
+  height:41px;
+}
+.portrait .icon_12x18{
+  width:35px;
+  height:54px;
+}
+.portrait .icon_16x20{
+  width:46px;
+  height:59px;
+}
+.portrait .icon_20x30{
+  width:58px;
+  height:88px;
+}
+.portrait .icon_24x36{
+  width:70px;
+  height:108px;
+}
+
+.deliveryOptions{
+  margin-left: 27px;
+  bottom: 40px;
+  position:absolute;
+}
+
+
+//Choose albums CSS
+
+.album-bg{
+  background: url(album.png) center center no-repeat;
+  width:147px;
+  height:147px;
+  margin:0 auto;
+}
+.album-bg img{
+  width: 121px;
+  height: 121px;
+  z-index:1;
+  margin-top:10px;
+  margin-left:10px;
+}
+
+.album-bg.selected img{
+  border: 5px solid green;
+  position: absolute;
+  width: 131px;
+  height: 131px;
+  margin-top:5px;
+  margin-left:5px;
+  z-index: 10;
+}
+.album-bg.selected span {
+  background: url("selectphoto.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+  display: inline-block;
+  height: 147px;
+  position: absolute;
+  width: 147px;
+  z-index: 10;
+}
+
+.photoDiv{
+  width:147px;
+  height:147px;
+  margin:auto;
+  position: relative;
+}
+.photoDiv img{
+  position:absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  margin:auto;
+  max-width:100%;
+  max-height:100%;
+}
+.photoDiv.selected span {
+  background: url("selectphoto.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+  display: inline-block;
+  height: 147px;
+  position: absolute;
+  width: 147px;
+  z-index: 10;
+}
+.arrow-backtoalbums{
+  border-right:10px solid #000;
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  margin-right: 5px;
+}
+//Tooltip
+.tip{
+  text-align: center;
+  width: 235px;
+  z-index: 100;
+  margin:-40px auto 0px;
+}
+
+.tip .uparrow{
+    border-bottom: 20px solid #FFFFFF;
+    border-left: 15px solid rgba(0, 0, 0, 0);
+    border-right: 15px solid rgba(0, 0, 0, 0);
+    height: 0;
+    margin: 0 auto;
+    width: 0;
+}
+
+.content-wrapper-tooltip{
+    border:1px solid #CCCCCC;
+    border-radius:5px;
+    padding:0px 10px;
+    box-shadow:0px 0px 10px #CCCCCC;
+    background-color:#FFFFFF;
+    border-top: 0px solid #CCCCCC;
+}
+
+//slider css
+
+.es-carousel-wrapper {
+  background: none repeat scroll 0 0 #FFFFFF !important;
+  border-radius: 0px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  padding: 10px 27px;
+  position: relative;
+}
+.es-carousel {
+  background: none repeat scroll 0 #FFFFFF !important;
+  overflow: hidden;
+  margin-top:0.5em;
+ }
+
+.es-carousel ul li a {
+  border-color: #FFFFFF !important;
+  border-style: solid;
+  display: block;
+  opacity: 0.8;
+  transition: all 0s ease-in-out 0s;
+}
+.es-carousel ul li.selected a {
+  border-color: #FFFFFF !important;
+  opacity: 1;
+}
+
+//Buttons
+.btn-primary{
+  border-radius: 3px;
+  padding:10px 20px;
+}
+
+
+

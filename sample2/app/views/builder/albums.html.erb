@@ -1,0 +1,149 @@
+<script>
+    var albdata;
+    var flag = true;
+    (function(){
+        var count;
+        $.getJSON( "../assets/albums.json", function( data ) {
+            albdata=data;
+            $.each( data, function( key, val ) {
+                // alert(key+""+val+" "+val.length+""+$(val).size());
+                $.each(val,function(k,imgValue){
+                    // alert(k+" "+imgValue);
+                    $('#albumsList').append('<li><div id='+key+' class="album-bg"><img src='+imgValue+'/><span></span></div><div class="blueText text-center">'+key+'</div></li>');
+                    return false;
+                });
+            });
+        });
+
+        /*$( window ).load(function() {
+            $('#albumsList div').click(function(){
+                $('#albumDiv').addClass("selected")
+                $('#albumDiv').addClass("hide");
+                // alert("id"+this.id+"   "+albdata);
+                var albumId=this.id;
+                $.each( albdata, function( key, val ) {
+                    // alert(key);
+                    if(key==albumId) {
+                        $.each(val,function(imgKey,imgValue){
+                            // alert(k+" "+imgValue);
+                            $('#imageList').append('<li><div id='+imgKey+' class="photoDiv"><img src='+imgValue+'/><span></span></div></li>');
+                        });
+                    }
+
+
+                });
+
+            });
+
+        });*/
+    })();
+    $(document).on('click', '#albumsList div', function(event){
+        // event.preventDefault();
+        if(flag) {
+            flag=false;
+            //alert("you clicked me" +event.handled);
+            $('#back_to_link').removeClass("hide");
+            $('#albumDiv').addClass("hide");
+            //alert("id"+this.id);
+            var albumId=this.id;
+            $.each( albdata, function( key, val ) {
+                // alert(key);
+                if(key==albumId) {
+                    $.each(val,function(imgKey,imgValue){
+                        $('#imageList').append('<li><div id='+imgKey+' class="photoDiv"> <%=link_to builder_editoptions_path do%><img src='+imgValue+'/><%end%> <span></span></div></li>');
+
+                    });
+                }
+            });
+            //event.returnValue = false;
+
+            // alert("finish");
+            event.stopImmediatePropagation();
+        }
+    });
+</script>
+
+
+<div class="row">
+  <div class="small-8 columns header-top-margin">
+    <img src="../assets/wg-logo.jpg"></img>
+  </div>
+  <div class="small-4 columns"></div>
+</div>
+
+<div class="row">
+  <div class="small-12 header-greybar"></div>
+</div>
+
+<div class="row">
+  <div class="small-3 columns">
+    <h2 class="headTitle">Poster</h2>
+  </div>
+  <div class="small-9 columns text-right" style="margin:15px 0px">
+    <span style="font-size:1em"><span class="blueText">11x14 Poster Print</span> &nbsp;&nbsp;$10.99</span></div>
+</div>
+
+<!-- Guided Image -->
+<div class="row">
+  <div class="small-12 guidedImg step-choosephoto">
+    <ul class="small-block-grid-4 show-for-small-only text-center">
+      <li><img src="../assets/icon_ga_size.jpg"/></li>
+      <li><img src="../assets/icon_ga_photo_on.jpg"/></li>
+      <li><img src="../assets/icon_ga_edit.jpg"/></li>
+      <li><img src="../assets/icon_ga_cart.jpg"/></li>
+    </ul>
+    <ul class="small-block-grid-4 hide-for-small-only text-center">
+      <li>Size and Orientation</li>
+      <li class="selected">Choose Photo</li>
+      <li>Preview / Edit</li>
+      <li>Cart / Upsell</li>
+    </ul>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="small-6 columns">
+    <h3 class="subtitle">Choose Photo</h3>
+  </div>
+  <div class="small-6 columns " style="margin:8px 0px;">
+    <div class="right blueText">Upload Photos <img src="../assets/upload.jpg" /></div>
+  </div>
+</div>
+<br/>
+
+<div id="albumDiv" class="row albumsContainer">
+  <div class="small-12 columns ">
+    <select>
+      <option value="youralbums">Your Albums</option>
+      <option value="friendsalbums">Friends Albums</option>
+      <option value="projects">Projects</option>
+    </select>
+  </div>
+  <div class="small-12 columns">
+  <ul id="albumsList" class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 xl-block-grid-5">
+
+    <!--  <li><div class="album-bg"><img src="../assets/2.jpg"/></div></li>
+     <li><div class="album-bg"><img src="../assets/3.jpg"/></div></li>
+     <li><div class="album-bg"><img src="../assets/4.jpg"/></div></li>
+     <li><div class="album-bg"><img src="../assets/5.jpg"/></div></li>
+     <li><div class="album-bg"><img src="../assets/6.jpg"/></div></li>
+     <li><div class="album-bg"><img src="../assets/25.jpg"/></div></li>-->
+  </ul>
+  </div>
+</div>
+
+<div class="row photosContainer">
+  <div class="small-12 columns hide" id="back_to_link" >
+    <div class="arrow-backtoalbums"></div> <%= link_to 'Back to albums',builder_back_to_albums_path%>
+  </div>
+  <div class="small-12 columns">
+    <ul id="imageList" class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 xlarge-block-grid-5">
+      <!-- <li><div class="photoDiv selected"><img src="../assets/1.jpg"/><span></span></div></li>
+       <li><div class="photoDiv"><img src="../assets/25.jpg"/><span></span></div></li>
+       <li><div class="photoDiv"><img src="../assets/2.jpg"/><span></span></div></li>
+       <li><div class="photoDiv"><img src="../assets/3.jpg"/><span></span></div></li>
+       <li><div class="photoDiv"><img src="../assets/v1.jpg"/><span></span></div></li>
+       <li><div class="photoDiv"><img src="../assets/v5.jpg"/><span></span></div></li> -->
+    </ul>
+  </div>
+</div>

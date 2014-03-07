@@ -1,0 +1,149 @@
+
+<script>
+    $(document).ready(function(){
+        $('input:radio[name=orientation]').change(function(){
+            //alert("hello 1");
+            if($("input[name='orientation']:checked").val() == 'landscape'){
+                //alert("landscape");
+                $('#iconsdiv').removeClass().addClass('small-12 columns landscape');
+
+            }
+           if($("input[name='orientation']:checked").val() == 'portrait'){
+            //else {
+                $('#iconsdiv').removeClass().addClass('small-12 columns portrait');
+                //alert("potrait");
+
+            }
+        });
+    });
+</script>
+
+<!-- Logo-->
+<div class="row">
+  <div class="small-8 columns header-top-margin">
+    <img src="../assets/wg-logo.jpg"></img>
+  </div>
+  <div class="small-4 columns"></div>
+</div>
+
+<div class="row">
+  <div class="small-12 header-greybar"></div>
+</div>
+
+<div class="row">
+  <div class="small-3 columns">
+    <h2 class="headTitle">Poster</h2>
+  </div>
+  <div class="small-9 columns text-right" style="margin:15px 0px">
+    <span style="font-size:1em"><span class="blueText">11x14 Poster Print</span> &nbsp;&nbsp;$10.99</span></div>
+</div>
+<!-- Guided Image -->
+<div class="row">
+  <div class="small-12 guidedImg step-choosesize">
+    <ul class="small-block-grid-4 show-for-small-only text-center">
+      <li><img src="../assets/icon_ga_size_on.png"/></li>
+      <li><img src="../assets/icon_ga_photo.jpg"/></li>
+      <li><img src="../assets/icon_ga_edit.jpg"/></li>
+      <li><img src="../assets/icon_ga_cart.jpg"/></li>
+    </ul>
+    <ul class="small-block-grid-4 hide-for-small-only text-center">
+      <li class="selected">Size and Orientation</li>
+      <li>Choose Photo</li>
+      <li>Preview / Edit</li>
+      <li>Cart / Upsell</li>
+    </ul>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="small-12 columns">
+    <h3 class="subtitle">Choose Size/Orientation</h3>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="small-6 columns">
+    <input type="radio" id="radio_land" name="orientation" value="landscape" checked></input> <label for="radio_land" style="font-size:1.1em">Landscape</label>
+  </div>
+  <div class="small-6 columns">
+    <input type="radio" id="radio_port" name="orientation" value="portrait"></input> <label for="radio_port" style="font-size:1.1em">Portrait</label>
+  </div>
+</div>
+
+
+<div class="row">
+  <div id="iconsdiv"  class="small-12 columns landscape">
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 xlarge-block-grid-5">
+      <li>
+        <%=link_to builder_albums_path(orienation:@orienation) do%><div class="icon_11x14 selected"></div><%end%>
+        <div class="deliveryOptions">
+          <span>11x14</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%><div class="icon_12x18"></div><%end%>
+        <div class="deliveryOptions">
+          <span>12x18</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%><div class="icon_16x20"></div><%end%>
+        <div class="deliveryOptions">
+          <span>16x20</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%><div class="icon_20x30"></div><%end%>
+        <div class="deliveryOptions">
+          <span>20x30</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%> <div class="icon_24x36"></div><%end%>
+        <div class="deliveryOptions">
+          <span>24x36</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div id="iconsdiv"  class="small-12 columns portrait hide">
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 xlarge-block-grid-5">
+      <li>
+        <%=link_to builder_albums_path(orienation:@orienation) do%><div class="icon_11x14 selected"></div><%end%>
+        <div class="deliveryOptions">
+          <span>11x14</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%><div class="icon_12x18"></div><%end%>
+        <div class="deliveryOptions">
+          <span>12x18</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%><div class="icon_16x20"></div><%end%>
+        <div class="deliveryOptions">
+          <span>16x20</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%><div class="icon_20x30"></div><%end%>
+        <div class="deliveryOptions">
+          <span>20x30</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <%=link_to builder_albums_path do%> <div class="icon_24x36"></div><%end%>
+        <div class="deliveryOptions">
+          <span>24x36</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+

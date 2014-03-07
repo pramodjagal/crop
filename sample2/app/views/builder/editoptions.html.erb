@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+
+  <script>
+
+      $(function(){
+
+          $("div.tip").delay(2000).fadeOut(2000);
+          var currentAngle=0;
+          var currentScale=1;
+          var zoom=0.1;
+          var brightness=1;
+          var canvas=document.getElementById("myCanvas");
+          var ctx=canvas.getContext("2d");
+
+          var angleInDegrees=0;
+          //alert("width"+canvas.height);
+          var image=document.createElement("img");
+          image.src="../assets/1.jpg";
+          image.id="imageId";
+          image.onload=function(){
+              ctx.drawImage(image,canvas.width/2-image.width/2,canvas.height/2-image.height/2);
+              canvas.setAttribute('style', 'filter:brightness(' + brightness + '); -webkit-filter:brightness(' + brightness + '); -moz-filter:brightness(' + brightness + ')');
+              //alert(image.height);
+          }
+
+          //Rotate image right
+          $("#clockwise").click(function(){
+              angleInDegrees=90;
+              currentAngle+=angleInDegrees;
+              drawImage();
+          });
+
+          //Rotate Image to Left
+          $("#counterclockwise").click(function(){
+              angleInDegrees=90;
+              currentAngle-=angleInDegrees;
+              drawImage();
+          });
+
+          //Zoom out the image
+          $("#zoomOutId").click(function() {
+              currentScale+=zoom;
+              drawImage();
+          });
+
+          //Zoom in the image
+          $("#zoomInId").click(function() {
+              currentScale-=zoom;
+              drawImage();
+          });
+
+          //Draw a image in canvas area
+          function drawImage(){
+              ctx.clearRect(0,0,canvas.width,canvas.height);
+              ctx.save();
+              ctx.translate(canvas.width/2,canvas.height/2);
+              ctx.scale(currentScale,currentScale);
+              ctx.rotate(currentAngle*Math.PI/180);
+              ctx.drawImage(image,-image.width/2,-image.height/2);
+              ctx.restore();
+          }
+
+          //Brightness slider changes
+          /*  $("#sliderBar").change(function(){
+           var amount = this.value;
+           //  var img = document.getElementById('myCanvas');
+           canvas.setAttribute('style', 'filter:brightness(' + amount + '); -webkit-filter:brightness(' + amount + '); -moz-filter:brightness(' + amount + ')');
+
+           });*/
+
+          $("#brightnessLow").click(function(){
+              if(brightness>0.10000000000000014) {
+                  brightness-=0.1;
+                  //alert("brighness"+brightness);
+                  canvas.setAttribute('style', 'filter:brightness(' + brightness + '); -webkit-filter:brightness(' + brightness + '); -moz-filter:brightness(' + brightness + ')');
+              }
+
+
+          });
+
+          $("#brightnessUp").click(function(){
+              brightness+=0.1;
+              // alert("brighness"+brightness);
+              canvas.setAttribute('style', 'filter:brightness(' + brightness + '); -webkit-filter:brightness(' + brightness + '); -moz-filter:brightness(' + brightness + ')');
+
+          });
+
+          //Toggle
+          $("#test").click(function(){
+              $("#EditSlider").toggle( );
+              $("#done").toggle( );
+              $("#tip").remove();
+          });
+
+
+
+
+
+      }); // end $(function(){});
+
+  </script>
+
+</head>
+
+<body>
+
+<!-- Logo-->
+<div class="row">
+  <div class="small-8 columns header-top-margin">
+    <img src="../assets/wg-logo.jpg"></img>
+  </div>
+  <div class="small-4 columns"></div>
+</div>
+
+<div class="row">
+  <div class="small-12 header-greybar"></div>
+</div>
+
+<div class="row">
+  <div class="small-3 columns">
+    <h2 class="headTitle">Poster</h2>
+  </div>
+  <div class="small-9 columns text-right" style="margin:15px 0px">
+    <span style="font-size:1em"><span class="blueText">11x14 Poster Print</span> &nbsp;&nbsp;$10.99</span></div>
+</div>
+
+<!-- Guided Image -->
+<div class="row">
+  <div class="small-12 guidedImg step-edit">
+    <ul class="small-block-grid-4 show-for-small-only text-center">
+      <li><img src="../assets/icon_ga_size.jpg"/></li>
+      <li><img src="../assets/icon_ga_photo.jpg"/></li>
+      <li><img src="../assets/icon_ga_edit_on.jpg"/></li>
+      <li><img src="../assets/icon_ga_cart.jpg"/></li>
+    </ul>
+    <ul class="small-block-grid-4 hide-for-small-only text-center">
+      <li>Size and Orientation</li>
+      <li>Choose Photo</li>
+      <li class="selected">Preview / Edit</li>
+      <li>Cart / Upsell</li>
+    </ul>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="small-12 columns">
+    <h3 class="subtitle">Preview / Edit</h3>
+  </div>
+</div>
+<br/>
+<div id="test" class="row">
+  <div class="small-12 medium-8 large-6 medium-offset-2 large-offset-3">
+    <canvas id="myCanvas" class="small-12 columns"></canvas>
+    <!-- Tooltip for Edit options-->
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 text-center">
+    <div class="tip">
+      <div class="uparrow"></div>
+      <div class="content-wrapper-tooltip">
+        <p>By tapping image<br/>toggle preview to edit modes</p>
+      </div>
+    </div>
+    <br><br>
+    <a class="button btn-primary" id="done" href="#">Done</a>
+  </div>
+</div>
+<br><br>
+
+    <!-- Edit options Slider -->
+<div id="EditSlider" class="hide">
+      <div id="rg-gallery" class="rg-gallery">
+      <div class="rg-thumbs">
+        <!-- Elastislide Carousel Thumbnail Viewer -->
+        <div class="es-carousel-wrapper">
+          <div class="es-nav">
+            <span class="es-nav-prev">Previous</span>
+            <span class="es-nav-next">Next</span>
+          </div>
+          <div class="es-carousel">
+
+            <ul>
+              <li>
+                <img src="../assets/autoenhance.png">
+                <div style="margin-top: 5px;font-size:14px;" class="blueText">Auto Enhance</div>
+              </li>
+              <li>
+                <img src="../assets/crop.png">
+                <div style="margin-top: 5px;font-size:14px;" class="blueText">Crop</div>
+              </li>
+              <li id="counterclockwise">
+                <img src="../assets/ACWR.png">
+                <div style="margin-left: 25px;margin-top: 5px;font-size:14px;" class="blueText">Rotate</div>
+              </li>
+              <li id="clockwise"><img src="../assets/CWR.png"></li>
+              <li id="brightnessLow">
+                <img src="../assets/remove_brighness.png" style="margin-left:20px;">
+                <div style="margin-left: 55px;margin-top: 10px;font-size:14px;" class="blueText">Brightness</div>
+              </li>
+              <li>
+                <img src="../assets/brighness_icon.png">
+              </li>
+              <li id="brightnessUp"><img src="../assets/add brightness.png"></li>
+              <li id="zoomInId">
+                <img src="../assets/zoomin.png">
+                <div style="margin-left: 30px;margin-top: 10px;font-size:14px;" class="blueText">Zoom</div>
+              </li>
+              <li id="zoomOutId"><img src="/assets/zoomout.png"></li>
+              <li>
+                <img src="../assets/redeye.png"/>
+                <div style="margin-top: 10px;font-size:14px;" class="blueText">Red eye removal</div>
+              </li>
+            </ul>
+           </div>
+          </div>
+        </div>
+        <!-- End Elastislide Carousel Thumbnail Viewer -->
+      </div><!-- rg-thumbs -->
+  </div>
+   <br><br>
+
+<!--
+<div class="row">
+  <label for="sliderBar">Brightness</label>
+  <input type="range" id="sliderBar" min="0" max="2" step="0.1" value="1">
+</div>
+-->
+
+
+</body>
+</html>

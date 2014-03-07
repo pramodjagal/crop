@@ -1,0 +1,137 @@
+<style>
+  .landscape ul li{
+      height:132px;
+      position: relative;
+      margin-bottom: 1em;
+  }
+  .portrait ul li{
+      height:165px;
+      position: relative;
+  }
+  .deliveryOptions{
+      margin-left: 27px;
+      bottom: 40px;
+      position:absolute;
+  }
+  .landscape .icon_11x14, .landscape .icon_12x18, .landscape .icon_16x20, .landscape .icon_20x30, .landscape .icon_24x36,
+  .portrait .icon_11x14, .portrait .icon_12x18, .portrait .icon_16x20, .portrait .icon_20x30, .portrait .icon_24x36
+  {
+      background-color: #ccc;
+      border: 1px solid #999;
+      margin-left:27px;
+      position: absolute;
+      bottom: 80px;
+  }
+</style>
+<script>
+    $(document).ready(function(){
+        $('input:radio[name=orientation]').change(function(){
+            //alert("hello 1");
+            if($("input[name='orientation']:checked").val() == 'landscape'){
+                //alert("landscape");
+                $('#iconsdiv').removeClass().addClass('small-12 columns landscape');
+
+            }
+            if($("input[name='orientation']:checked").val() == 'portrait'){
+                $('#iconsdiv').removeClass().addClass('small-12 columns portrait');
+                //alert("potrait");
+            }
+        });
+    });
+</script>
+
+
+<!-- Logo-->
+<div class="row">
+  <div class="small-8 columns header-top-margin">
+    <img src="../assets/wg-logo.jpg"></img>
+  </div>
+  <div class="small-4 columns"></div>
+</div>
+
+<div class="row">
+  <div class="small-12 header-greybar"></div>
+</div>
+
+<div class="row">
+  <div class="small-3 columns">
+    <h2>Poster</h2>
+  </div>
+  <div class="small-9 columns text-right" style="margin:15px 0px">
+    <span style="font-size:1em">11x14 Poster Print &nbsp;&nbsp;$10.99</span></div>
+</div>
+
+<div class="row">
+  <div class="small-12 guidedImg">
+    <ul class="small-block-grid-4 show-for-small-only text-center">
+      <li><img src="../assets/icon_ga_size.png"/></li>
+      <li><img src="../assets/icon_ga_photo.jpg"/></li>
+      <li><img src="../assets/icon_ga_edit.jpg"/></li>
+      <li><img src="../assets/icon_ga_cart.jpg"/></li>
+    </ul>
+    <ul class="small-block-grid-4 hide-for-small-only text-center">
+      <li class="selected">Size and Orientation</li>
+      <li>Choose Photo</li>
+      <li>Preview / Edit</li>
+      <li>Cart / Upsell</li>
+    </ul>
+    <!--<img data-interchange="[../assets/small_ga_size.jpg, (small)],[../assets/small_ga_size.jpg, (medium)],[../assets/large_ga_size_notext.jpg, (large)]" class="small-12" />
+    <noscript><img src="../assets/small_ga_size.jpg" class="small-12" /></noscript>-->
+
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="small-12 columns">
+    <h3>Choose Size/Orientation</h3>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="small-6 columns">
+    <input type="radio" id="radio_land" name="orientation" value="landscape" checked></input> <label for="radio_land" style="font-size:1.1em">Landscape</label>
+  </div>
+  <div class="small-6 columns">
+    <input type="radio" id="radio_port" name="orientation" value="portrait"></input> <label for="radio_port" style="font-size:1.1em">Portrait</label>
+  </div>
+</div>
+
+
+<div class="row">
+  <div id="iconsdiv"  class="small-12 columns landscape">
+    <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-5">
+        <li>
+          <div class="icon_11x14"></div>
+          <div class="deliveryOptions">
+            <span>11x14</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+          </div>
+        </li>
+          <li>
+            <div class="icon_12x18"></div>
+            <div class="deliveryOptions">
+              <span>12x18</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+            </div>
+          </li>
+      <li>
+        <div class="icon_16x20"></div>
+        <div class="deliveryOptions">
+          <span>16x20</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <div class="icon_20x30"></div>
+        <div class="deliveryOptions">
+          <span>20x30</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+      <li>
+        <div class="icon_24x36"></div>
+        <div class="deliveryOptions">
+          <span>24x36</span> <img src="../assets/icon_SDP.jpg"/> <img src="../assets/icon_mailorder.jpg"/>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
