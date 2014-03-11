@@ -1,0 +1,332 @@
+.crop-maindiv{
+  width:675px;
+  padding:0px 20px;
+}
+html > body .crop-maindiv{
+  width:633px;
+}
+.crop-maindiv span{
+  color: #35393c;
+  font-size:14px;
+}
+
+.crop-lowresdiv{
+  width:396px; //391
+  height:53px;
+  border: 1px solid #e19f86;
+  padding:7px 17px;
+  float:left;
+  background-color: #fbf1e7;
+  box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+}
+
+
+.crop-lowresdiv span{
+  color: #c43f0e;
+  font-size:14px;
+}
+.crop-lowresdiv a{
+  font-size:14px;
+}
+html > body .crop-lowresdiv{
+  width:366px; //355
+  height:29px;
+}
+.crop-leftpanel{
+  width:310px;
+  background-color:#cccccc;
+  float:left;
+  margin-right:20px;
+  margin-bottom:15px;
+  clear:both;
+}
+.crop-leftpanel table, .crop-leftpanel tr{
+  background-color: #cccccc !important;
+  margin-bottom: 0px;
+}
+
+
+
+
+html> body .crop-leftpanel{
+  width:452px;
+}
+.crop-rightpanel{
+  width:162px;
+  float:left;
+  font-size:14px;
+  margin-top: -3px;
+  padding-bottom: 15px;
+}
+.crop-rightpanel a{
+  font-size: 14px;
+}
+html > body .crop-rightpanel{
+  width:161px;
+}
+.crop-rightpanel span{
+  display: inline-block;
+}
+.crop-heading{
+  font-size:24px;
+  color: #878f95;
+  padding:16px 0px 14px;
+}
+
+
+
+.preview-padding
+{
+  padding-left:8px;
+  padding-top:5px;
+  padding-bottom:7px;
+}
+
+html > body .crop-heading{
+  padding:15px 0px 14px;
+}
+.crop-btnpanel{
+  float:right;
+  padding-top:10px;
+  width:184px;
+  height: 35px;
+}
+
+.btn-primary{
+  font: bold 14px Arial;
+  color: #ffffff;
+  border: 1px solid #576068;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: #3388cd -moz-linear-gradient(top, #3388cd, #1c6095);
+  background: #3388cd -webkit-linear-gradient(top, #3388cd, #1c6095);
+  background: #3388cd -ms-linear-gradient(top, #3388cd, #1c6095);
+  background: #3388cd -o-linear-gradient(top, #3388cd, #1c6095);
+  background: #3388cd linear-gradient(top, #3388cd, #1c6095);
+  height: 35px;
+  padding: 7px 9px 8px;
+  text-decoration:none;
+  cursor: pointer;
+}
+.btn-primary:hover{
+  color: #ffffff;
+  text-decoration:none;
+  font: bold 14px Arial;
+  text-decoration: none;
+}
+html > body .btn-primaryhide{
+  height: auto;
+}
+.btn-primaryhide{
+  font: bold 14px Arial;
+  color: #e0e1e4;
+  border:1px solid #e0e1e4;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: -moz-linear-gradient(top, #ffffff, #f1f4f2);
+  background: -webkit-linear-gradient(top, #ffffff, #f1f4f2);
+  background: -ms-linear-gradient(top, #ffffff, #f1f4f2);
+  background: -o-linear-gradient(top, #ffffff, #f1f4f2);
+  background: linear-gradient(top, #ffffff, #f1f4f2);
+  padding: 7px 9px 8px;
+  height: 35px;
+  cursor: pointer;
+}
+.btn-primaryhide:hover{
+  color: #e0e1e4;
+  text-decoration:none;
+  font: bold 14px Arial;
+  text-decoration: none;
+}
+html > body .btn-secondary{
+  height: auto;
+}
+.btn-secondary{
+  font: bold 14px Arial;
+  color: #1c6095;
+  border:1px solid #c8cbce;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: -moz-linear-gradient(top, #ffffff, #f9f9f9);
+  background: -webkit-linear-gradient(top, #ffffff, #f9f9f9);
+  background: -ms-linear-gradient(top, #ffffff, #f9f9f9);
+  background: -o-linear-gradient(top, #ffffff, #f9f9f9);
+  background: linear-gradient(top, #ffffff, #f9f9f9);
+  padding: 7px 9px 8px;
+  height: 35px;
+  cursor: pointer;
+}
+
+
+
+
+
+.crop-leftpanel-mobile{
+  width:310px;
+  background-color:#cccccc;
+  float:left;
+  margin-right:20px;
+  margin-bottom:15px;
+  clear:both;
+}
+
+.crop-rightpanel{
+  width:162px;
+  float:left;
+  font-size:14px;
+  margin-top: -3px;
+  padding-bottom: 15px;
+}
+.crop-rightpanel a{
+  font-size: 14px;
+}
+html > body .crop-rightpanel{
+  width:161px;
+}
+.crop-rightpanel span{
+  display: inline-block;
+}
+.crop-heading{
+  font-size:24px;
+  color: #878f95;
+  padding:16px 0px 14px;
+}
+
+
+
+.preview-padding
+{
+  padding-left:8px;
+  padding-top:5px;
+  padding-bottom:7px;
+}
+
+html > body .crop-heading{
+  padding:15px 0px 14px;
+}
+.crop-btnpanel{
+  float:right;
+  padding-top:10px;
+  width:184px;
+  height: 35px;
+}
+
+.btn-secondary:hover{
+  color: #1c6095;
+  text-decoration:none;
+  font: bold 14px Arial;
+  text-decoration: none;
+}
+
+
+.lowres-text{
+  display:inline-block;
+  width:333px;
+
+}
+
+.sprite-h{
+  display:block;
+  background:url("homespriteimg_new.png") no-repeat;
+}
+
+.new-resolutionicon{
+  background-position:-99px -3266px;
+  padding-right: 27px;
+  display: inline-block;
+  width: 22px;
+  height: 25px;
+}
+
+
+html > body .new-resolutionicon{
+  padding-right: 7px;
+  height: 22px;
+}
+
+a {
+  font-family: Arial;
+  font-size: 12px;
+  color: #2774A6;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+  color:#2774A6;
+}
+
+body, div, table, tr, td, p, span {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #464646;
+}
+
+div{outline-style: none}
+
+.icon-landscape{
+  background-position: -149px -3253px;
+  width: 41px;
+  height: 30px;
+  cursor:pointer;
+  display: inline-block;
+}
+.icon-portrait{
+  background-position: -219px -3243px;
+  width: 31px;
+  height: 40px;
+  cursor:pointer;
+  display: inline-block;
+}
+
+.icon-landscape{
+  background-position: -149px -3253px;
+  width: 41px;
+  height: 30px;
+  cursor:pointer;
+  display: inline-block;
+}
+.icon-portrait{
+  background-position: -219px -3243px;
+  width: 31px;
+  height: 40px;
+  cursor:pointer;
+  display: inline-block;
+}
+.radio-blue-active{
+  background-position: 0px -2930px;
+  width: 14px;
+  height: 14px;
+}
+.radio-blue{
+  background-position: 0px -2964px;
+  width: 14px;
+  height: 14px;
+}
+.radio-h-position{
+  display: inline-block;
+  height: 22px;
+  margin-right: 10px;
+}
+.radio-v-position{
+  display: inline-block;
+  height: 25px;
+  margin-right: 15px;
+}
+html > body .radio-blue-active{
+  background-position: 0px -2931px;
+}
+html > body .radio-blue{
+  background-position: 0px -2965px;
+}
+@media only screen and (min-width: 40.063em) {
+  .crop-leftpanel{
+    width:310px;
+  }
+}
+
+

@@ -1,0 +1,2 @@
+module ImagecropHelper
+end

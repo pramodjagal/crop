@@ -1,78 +1,116 @@
-<div class="crop-maindiv">
-  <div class="crop-heading">Preview and Crop:</div>
-  <div>
 
-    <div class="crop-leftpanel">
-
-
-      <table cellspacing="0" cellpadding="0" border="0">
-        <tr>
-          <td width="15" height="32"></td>
-          <td></td>
-          <td width="15"></td>
-        </tr>
-        <tr>
-          <td width="15"></td>
-          <td align="center" width="422">
-            <img src="" id="target"/>
-
-            <div style="display:none">
-              <label>X1 <input type="text" size="4" id="x1" name="x1"/></label>
-              <label>Y1 <input type="text" size="4" id="y1" name="y1"/></label>
-              <label>X2 <input type="text" size="4" id="x2" name="x2"/></label>
-              <label>Y2 <input type="text" size="4" id="y2" name="y2"/></label>
-              <label>W <input type="text" size="4" id="w" name="w"/></label>
-              <label>H <input type="text" size="4" id="h" name="h"/></label><br/>
-              <label>Journal <input type="text" size="10" id="journal" name="journal"/></label>
-            </div>
-
-          </td>
-          <td width="15">
-            <script language="JavaScript1.2">
-                loadMainAppControl();
-            </script>
-          </td>
-        </tr>
-        <tr>
-          <td width="15" height="32"></td>
-          <td></td>
-          <td width="15"></td>
-        </tr>
-      </table>
-    </div>
-    <div class="crop-rightpanel">
-      <span style="padding-bottom:11px;">
-          <a href="javascript:void(0);" id="revertCrop">Revert to original</a>
-      </span>
-      <span style="padding-bottom:10px;">
-          <b>To resize the crop box</b>,<br/>drag the corner handles.
-        </span>
-      <span style="padding-bottom:11px;"><b>To move the crop
-        box</b>,<br/>click and drag the center of the box.
-      </span>
-      <span style="padding-bottom:27px;">When you're done, click 'Apply crop'.</span>
-
-      <span style="padding-bottom:5px;"><b>Crop Orientation</b></span><br/>
-
-      <span class="sprite-h radio-blue radio-h-position" id="landscapeRadio"></span>
-      <span id="landscapeImageRadio" class="sprite-h icon-landscape"></span><br/>
-      <span style="height:19px;display:block;"></span>
-      <span class="sprite-h radio-blue radio-v-position" id="potraitRadio"></span>
-      <span id="potraitImageRadio" class="sprite-h icon-portrait"></span>
-
-
-    </div>
+<div class="row">
+  <div class="small-8 columns header-top-margin">
+    <img src="../assets/wg-logo.jpg" />
   </div>
-  <div id="mobile-portrait">
-    <div class="crop-lowresdiv" id="resWarningCrop" style="display:none;">
-      <span class="sprite-h new-resolutionicon"></span>
-                      <span class="lowres-text"><b>Low resolution.</b> This image's resolution quality may result in a blurry or pixelated print. <a
-                      href="#">Learn
-                        more &#8250;</a></span>
-    </div>
-    <div class="crop-btnpanel">
-      <a href="javascript:cancel()" class="btn-secondary" title="Cancel" style="margin-right:15px;">Cancel</a>
-      <a href="javascript:doneEditing()" class="btn-primary" title="Apply crop">Apply crop</a>
-    </div>
+  <div class="small-4 columns"></div>
+</div>
+
+<div class="row">
+  <div class="small-12 header-greybar"></div>
+</div>
+
+<div class="row">
+  <div class="small-3 columns">
+    <h2 class="headTitle">Poster</h2>
   </div>
+  <div class="small-9 columns text-right" style="margin:15px 0px">
+    <span style="font-size:1em"><span class="blueText">11x14 Poster Print</span> &nbsp;&nbsp;$10.99</span></div>
+</div>
+
+<!-- Guided Image -->
+<div class="row">
+  <div class="small-12 guidedImg step-edit">
+    <ul class="small-block-grid-4 show-for-small-only text-center">
+      <li><img src="../assets/icon_ga_size.jpg"/></li>
+      <li><img src="../assets/icon_ga_photo.jpg"/></li>
+      <li><img src="../assets/icon_ga_edit_on.jpg"/></li>
+      <li><img src="../assets/icon_ga_cart.jpg"/></li>
+    </ul>
+    <ul class="small-block-grid-4 hide-for-small-only text-center">
+      <li>Size and Orientation</li>
+      <li>Choose Photo</li>
+      <li class="selected">Preview / Edit</li>
+      <li>Cart / Upsell</li>
+    </ul>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="small-12 columns">
+    <h3 class="subtitle">Preview / Edit</h3>
+  </div>
+</div>
+<br/>
+<div id="test" class="row">
+  <div class="small-12 medium-8 large-6 medium-offset-2 large-offset-3">
+    <img src="" id="myCanvas" class="small-12 columns" />
+    <!-- Tooltip for Edit options-->
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 text-center">
+    <div class="tip">
+      <div class="uparrow"></div>
+      <div class="content-wrapper-tooltip">
+        <p>By tapping image<br/>toggle preview to edit modes</p>
+      </div>
+    </div>
+    <br><br>
+    <a class="button btn-primary" id="done" href="#">Done</a>
+  </div>
+</div>
+<br><br>
+
+<!-- Edit options Slider -->
+<div id="EditSlider" class="hide">
+  <div id="rg-gallery" class="rg-gallery">
+    <div class="rg-thumbs">
+      <!-- Elastislide Carousel Thumbnail Viewer -->
+      <div class="es-carousel-wrapper">
+        <div class="es-nav">
+          <span class="es-nav-prev">Previous</span>
+          <span class="es-nav-next">Next</span>
+        </div>
+        <div class="es-carousel">
+
+          <ul>
+            <li>
+              <img src="../assets/autoenhance.png">
+              <div style="margin-top: 5px;font-size:14px;" class="blueText">Auto Enhance</div>
+            </li>
+            <li>
+              <img src="../assets/crop.png">
+              <div style="margin-top: 5px;font-size:14px;" class="blueText">Crop</div>
+            </li>
+            <li id="counterclockwise">
+              <img src="../assets/ACWR.png">
+              <div style="margin-left: 25px;margin-top: 5px;font-size:14px;" class="blueText">Rotate</div>
+            </li>
+            <li id="clockwise"><img src="../assets/CWR.png"></li>
+            <li id="brightnessLow">
+              <img src="../assets/remove_brighness.png" style="margin-left:20px;">
+              <div style="margin-left: 55px;margin-top: 10px;font-size:14px;" class="blueText">Brightness</div>
+            </li>
+            <li>
+              <img src="../assets/brighness_icon.png">
+            </li>
+            <li id="brightnessUp"><img src="../assets/add brightness.png"></li>
+            <li id="zoomInId">
+              <img src="../assets/zoomin.png">
+              <div style="margin-left: 30px;margin-top: 10px;font-size:14px;" class="blueText">Zoom</div>
+            </li>
+            <li id="zoomOutId"><img src="/assets/zoomout.png"></li>
+            <li>
+              <img src="../assets/redeye.png"/>
+              <div style="margin-top: 10px;font-size:14px;" class="blueText">Red eye removal</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Elastislide Carousel Thumbnail Viewer -->
+  </div><!-- rg-thumbs -->
 </div>
