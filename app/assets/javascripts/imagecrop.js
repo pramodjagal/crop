@@ -5,25 +5,9 @@
 
 
 
-var picInfo = {};
+var picInfo = window.opener.picInfo;
 
 
-$.ajaxSetup({
-    async: false
-});
-
-$.getJSON('/assets/picinfo.json', function (data) {
-    picInfo = data; //you'll find your json here
-    setPicInfo(data);
-});
-
-
-function setPicInfo(data) {
-    picInfo = data;
-    $.ajaxSetup({
-        async: true
-    });
-}
 
 
 /**************************************************************************************************/
@@ -45,7 +29,7 @@ var isMobileBrowser = false;
 // var leadingOliId = <%= leadingOLIOid%>;
 // var isSqPrint = <%= isSqPrint%>;
 
-var originalCropspectRatio = 1.5; //todo: this needs to be calculated from the upc
+var originalCropspectRatio = window.opener.originalCropspectRatio;
 //var cropType = originalCropspectRatio > 1 ?
 if (journal == "") {
     strJournalca = getCropJournal(picWidthUB, picHeightUB, originalCropspectRatio);
@@ -67,12 +51,7 @@ if (isMobileBrowser) {
 }
 var minResolutionArray = new Array(540, 360);
 
-var journalEngine = new imageFactory(journal,
-    picInfo.imageSource,
-    picInfo.renderHostname,
-    hiresWidth, hiresHeight, picWidthUB,
-    picHeightUB, displayBoxSize);
-
+var journalEngine = window.opener.journalEngine;
 var cropAspectRatio = originalCropAspectRatio = picInfo.dblCropspectRatio;
 var isLandscape = picInfo.HRWidth >= picInfo.HRHeight;
 var thumbnailHeight = picInfo.tnHeight;
@@ -422,7 +401,15 @@ function cancel() //called when the cancel button is clicked
     window.opener.CPopup.close("dppcroporientation");
 }
 
-function doneEditing() //called when the 'done editing' button is clicked
+function doneEditing() {
+    var cropArea = __cropCA.split(",");
+    journalEngine.setCropArea(cropArea[0], cropArea[1], cropArea[2], cropArea[3], cropArea[4]);
+    var finalJournal = journalEngine.getFinalJournal();
+    window.opener.setUserImageSrc();
+    window.close();
+}
+
+/*function doneEditing() //called when the 'done editing' button is clicked
 {
     var cropArea = __cropCA.split(",");
     journalEngine.setCropArea(cropArea[0], parseFloat(cropArea[1]) + 0.003, cropArea[2], cropArea[3], cropArea[4]);
@@ -436,7 +423,7 @@ function doneEditing() //called when the 'done editing' button is clicked
     var cropAspRatio = "";
     if (sizeName == "4x6" || sizeName == "5x7" || sizeName == "8x10" || sizeName == "Wallet Set")
         cropAspRatio = "/cr=" + cropAspectRatio;
-    /* removing crop aspect ratio for posters as poster size can not fit to that cr value */
+    *//* removing crop aspect ratio for posters as poster size can not fit to that cr value *//*
     var strOf = "/of=50,150,150/";
     if (isMobileBrowser) {
         strOf = "/of=50,120,120/";
@@ -450,13 +437,13 @@ function doneEditing() //called when the 'done editing' button is clicked
             cropAspRatio, picInfo.getRenderHostname + "is=" + picInfo.getImageSource(true) +
             "/" + finalJournal + cropAspRatio + "/of=50,150,150/");
     }
-    else {/* when multiple sizes selected */
+    else {*//* when multiple sizes selected *//*
         window.opener.applyJournal(picInfo.getRenderHostname + "/is=" +
             picInfo.imageSource + "/" + finalJournal + cropAspRatio + strOf, finalJournal +
             cropAspRatio, finalJournalwithbd + cropAspRatio, mainCropControl.isLandscapeOrientation());
     }
     window.self.close();
-}   //end of doneEditing()
+}   //end of doneEditing()*/
 
 
 function getInitialCrop(journalEngine) {

@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1a702dc-e7ab-46db-a63d-94b213297c8a" name="Default" comment="checkin four&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/imagecrop_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/imagecrop_helper.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/preview_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/helpers/preview_helper.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/preview.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/imagecrop.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/preview.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/imagecrop.css.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/preview/index.html.erb" afterPath="$PROJECT_DIR$/app/views/imagecrop/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/myapp.iml" afterPath="$PROJECT_DIR$/.idea/myapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/preview.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/preview.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+    <list default="true" id="f1a702dc-e7ab-46db-a63d-94b213297c8a" name="Default" comment="checkin with preview and crop first phase&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/imagecrop.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/imagecrop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/preview/index.html.erb" afterPath="$PROJECT_DIR$/app/views/preview/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/preview.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/preview.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myapp.iws" />
@@ -47,7 +34,7 @@
       <file leaf-file-name="imagecrop.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/imagecrop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="21" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8115">
+            <state line="406" column="52" selection-start="14639" selection-end="14654" vertical-scroll-proportion="0.0" vertical-offset="5862" max-vertical-offset="7920">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -55,19 +42,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="picinfo.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/data/picinfo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="19" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="885">
+            <state line="67" column="19" selection-start="2058" selection-end="2072" vertical-scroll-proportion="-30.25" vertical-offset="279" max-vertical-offset="1230">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="36" selection-start="671" selection-end="671" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="35" column="19" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -76,7 +63,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/preview/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="6" selection-start="3885" selection-end="3885" vertical-scroll-proportion="-28.75" vertical-offset="1035" max-vertical-offset="1815">
+            <state line="46" column="9" selection-start="1376" selection-end="1376" vertical-scroll-proportion="-10.416667" vertical-offset="440" max-vertical-offset="1815">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#2;n#!!top" expanded="true" />
@@ -92,22 +79,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preview.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="preview.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/preview.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="25" selection-start="3626" selection-end="3626" vertical-scroll-proportion="0.22916667" vertical-offset="3000" max-vertical-offset="3780">
+            <state line="215" column="34" selection-start="3730" selection-end="3730" vertical-scroll-proportion="-16.041666" vertical-offset="2840" max-vertical-offset="3780">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="preview.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/preview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="70" column="26" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.5193906" vertical-offset="675" max-vertical-offset="1800">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1880" column="9" selection-start="49731" selection-end="49731" vertical-scroll-proportion="-8.555555" vertical-offset="27969" max-vertical-offset="39090">
+              <folding>
+                <marker date="1394440491114" expanded="false" signature="33618:33634" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imageFactory.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/imageFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="479" column="34" selection-start="16797" selection-end="16808" vertical-scroll-proportion="-7.296296" vertical-offset="6868" max-vertical-offset="11955">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ipadRotate.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ipadRotate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1608" column="0" selection-start="46514" selection-end="46514" vertical-scroll-proportion="0.0" vertical-offset="23254" max-vertical-offset="30900">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,17 +184,18 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.Jcrop.js" />
         <option value="$PROJECT_DIR$/app/assets/data/test.html" />
         <option value="$PROJECT_DIR$/app/assets/data/picinfo.json" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/preview.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/imagecrop/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/imagecrop.js" />
-        <option value="$PROJECT_DIR$/app/views/preview/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/preview.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/imagecrop/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/preview/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/common.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/imagecrop.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/preview.js" />
       </list>
     </option>
   </component>
@@ -725,19 +742,25 @@
       <created>1392788612332</created>
       <updated>1392788612332</updated>
     </task>
+    <task id="LOCAL-00001" summary="checkin with preview and crop first phase &#10;">
+      <created>1394509958972</created>
+      <updated>1394509958972</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32694247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498621" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27468285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27468285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38748738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -746,7 +769,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -764,6 +786,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="checkin with preview and crop first phase &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkin with preview and crop first phase &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -771,13 +795,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="0" selection-start="4516" selection-end="4516" vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="4260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/imagecrop.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="17" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
@@ -788,9 +805,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/imagecrop/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="0" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="1830">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -953,22 +968,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/imageFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="714" column="43" selection-start="22916" selection-end="22938" vertical-scroll-proportion="-11.111111" vertical-offset="10410" max-vertical-offset="12075">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ipadRotate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="775" column="4" selection-start="23778" selection-end="23782" vertical-scroll-proportion="0.32386962" vertical-offset="11317" max-vertical-offset="30900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.Jcrop.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="25" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="2520" />
@@ -1002,35 +1001,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/data/picinfo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="52" selection-start="2075" selection-end="2105" vertical-scroll-proportion="-41.875" vertical-offset="0" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/imagecrop/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="13" selection-start="1389" selection-end="2378" vertical-scroll-proportion="0.7180851" vertical-offset="270" max-vertical-offset="1260">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/imagecrop.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="3" selection-start="341" selection-end="341" vertical-scroll-proportion="-5.882353" vertical-offset="0" max-vertical-offset="5070">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/preview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="942">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,6 +1022,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/preview.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="215" column="34" selection-start="3730" selection-end="3730" vertical-scroll-proportion="-16.041666" vertical-offset="2840" max-vertical-offset="3780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -1057,12 +1038,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/imagecrop.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/data/picinfo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="21" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8115">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="67" column="19" selection-start="2058" selection-end="2072" vertical-scroll-proportion="-30.25" vertical-offset="279" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="671" selection-end="671" vertical-scroll-proportion="0.25531915" vertical-offset="0" max-vertical-offset="940">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,16 +1059,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/imagecrop/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="671" selection-end="671" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="420">
+        <state line="18" column="36" selection-start="462" selection-end="462" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/preview/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="6" selection-start="3885" selection-end="3885" vertical-scroll-proportion="-28.75" vertical-offset="1035" max-vertical-offset="1815">
+        <state line="46" column="9" selection-start="1376" selection-end="1376" vertical-scroll-proportion="-10.416667" vertical-offset="440" max-vertical-offset="1815">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#2;n#!!top" expanded="true" />
@@ -1097,10 +1083,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/preview.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ipadRotate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="25" selection-start="3626" selection-end="3626" vertical-scroll-proportion="0.22916667" vertical-offset="3000" max-vertical-offset="3780">
+        <state line="1608" column="0" selection-start="46514" selection-end="46514" vertical-scroll-proportion="0.0" vertical-offset="23254" max-vertical-offset="30900">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/imagecrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="406" column="52" selection-start="14639" selection-end="14654" vertical-scroll-proportion="0.0" vertical-offset="5862" max-vertical-offset="7920">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1880" column="9" selection-start="49731" selection-end="49731" vertical-scroll-proportion="-8.555555" vertical-offset="27969" max-vertical-offset="39090">
+          <folding>
+            <marker date="1394440491114" expanded="false" signature="33618:33634" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/imageFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="479" column="34" selection-start="16797" selection-end="16808" vertical-scroll-proportion="-7.296296" vertical-offset="6868" max-vertical-offset="11955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/preview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="26" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.5193906" vertical-offset="675" max-vertical-offset="1800">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
