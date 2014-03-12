@@ -29,10 +29,11 @@ var isMobileBrowser = false;
 // var leadingOliId = <%= leadingOLIOid%>;
 // var isSqPrint = <%= isSqPrint%>;
 
-var originalCropspectRatio = window.opener.originalCropspectRatio;
-//var cropType = originalCropspectRatio > 1 ?
+var originalCropAspectRatio = window.opener.originalCropAspectRatio;
+//var cropType = originalCropAspectRatio > 1 ?
 if (journal == "") {
-    strJournalca = getCropJournal(picWidthUB, picHeightUB, originalCropspectRatio);
+    strJournalca = getCropJournal(picWidthUB, picHeightUB, originalCropAspectRatio,
+        originalCropAspectRatio > 1 ? 0 : 1);
     journal = "/" + getFinalJournal(journal + strJournalca);
 }
 
@@ -52,7 +53,7 @@ if (isMobileBrowser) {
 var minResolutionArray = new Array(540, 360);
 
 var journalEngine = window.opener.journalEngine;
-var cropAspectRatio = originalCropAspectRatio = picInfo.dblCropspectRatio;
+var cropAspectRatio = originalCropAspectRatio;
 var isLandscape = picInfo.HRWidth >= picInfo.HRHeight;
 var thumbnailHeight = picInfo.tnHeight;
 
@@ -295,9 +296,9 @@ function setPortrait() {
 function getMinSizeArray(cropAspectRatio) {
     var minimumSizes = new Array();
     if (isLandscapeAspectRatio(cropAspectRatio))
-        minimumSizes = [sMinSize * originalCropspectRatio, sMinSize];
+        minimumSizes = [sMinSize * originalCropAspectRatio, sMinSize];
     else
-        minimumSizes = [sMinSize, sMinSize * originalCropspectRatio];
+        minimumSizes = [sMinSize, sMinSize * originalCropAspectRatio];
     return minimumSizes;
 }
 jQuery(function ($) {
