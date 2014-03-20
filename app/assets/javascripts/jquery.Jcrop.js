@@ -545,9 +545,7 @@
             rha = Math.abs(rh),
             real_ratio = rwa / rha,
             xx, yy, w, h;
-        	
-        if(rwa<=Math.ceil(min_x) && rha<=Math.ceil(min_y))
-            	return getRect();
+
 
         if (max_x === 0) {
           max_x = boundx * 10;

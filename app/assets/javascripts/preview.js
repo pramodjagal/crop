@@ -2,10 +2,14 @@
 //= require common.js
 
 var picInfo = null;
-var originalCropAspectRatio = 0.666;
+var prodWidth = 20;
+var prodHeight = 16;
+var originalCropAspectRatio = (prodWidth/prodHeight).toFixed(3);
 var displayBoxSize = 0;
 var journalEngine = null;
 var strJournalca = null;
+var cropJournal ="";
+var rotateCropJournal ="";
 
 function createjournalEngine() {
     journalEngine = new imageFactory(picInfo.imageJournal,
@@ -16,18 +20,18 @@ function createjournalEngine() {
 
     strJournalca = getCropJournal(picInfo.hrWidth, picInfo.hrHeight, originalCropAspectRatio,
         originalCropAspectRatio > 1 ? 0 : 1);
+    cropJournal = strJournalca;
+    rotateCropJournal =  getCropJournal(picInfo.hrHeight, picInfo.hrWidth, originalCropAspectRatio,
+        originalCropAspectRatio > 1 ? 0 : 1);
 
+    console.log("cropJournal="+cropJournal);
+    console.log("rotateCropJournal="+rotateCropJournal);
 
-    console.log("getCropJournal(picInfo.hrWidth, picInfo.hrHeight, originalCropAspectRatio) = " +
-        getCropJournal(picInfo.hrWidth, picInfo.hrHeight, originalCropAspectRatio));
-    console.log("getCropJournal(picInfo.hrHeight, picInfo.hrWidth, originalCropAspectRatio) = " +
-        getCropJournal(picInfo.hrHeight, picInfo.hrWidth, originalCropAspectRatio));
-    console.log("getFinalJournal(journalEngine.getFinalJournal() + strJournalca) = " +
-        getFinalJournal(journalEngine.getFinalJournal() + strJournalca))
 }
 function setUserImageSrc() {
+
     var SLASH = "/";
-    displayBoxSize = 385;
+    displayBoxSize = 585;
     if (journalEngine == null) {
         createjournalEngine();
         var constrainedImageSize = journalEngine.getConstrainedImageSizeFromPictDimension();
@@ -36,14 +40,16 @@ function setUserImageSrc() {
     var usrimage = "";
     if (CUtils.isEmpty(journalEngine.getCropArea())) {
         var _journal = getFinalJournal(journalEngine.getFinalJournal() + strJournalca);
+        var _cparea = strJournalca.split("=")[1].split(",");
+        journalEngine.setCropArea(_cparea[0],_cparea[1],_cparea[2],_cparea[3]);
         picInfo.journal = _journal;
         usrimage = journalEngine.getImageURLOriginal() + _journal;
     } else {
         usrimage = journalEngine.getImageURLOriginal() + journalEngine.getFinalJournal();
         picInfo.journal = journalEngine.getFinalJournal();
     }
-
     $("#userImage").attr("src", usrimage);
+
 }
 
 
@@ -73,15 +79,38 @@ $(function () {
     $("div.tip").delay(2000).fadeOut(2000);
 
 
+    $("#enhancecolor").click(function () {
+        if(journalEngine.getAutoFix() == "ac") {
+            journalEngine.setAutoFix("no");
+        } else {
+            journalEngine.setAutoFix("ac");
+        }
+        setUserImageSrc();
+    });
+
     //Rotate image right
     $("#clockwise").click(function () {
         journalEngine.setRotation("cw");
+        if(journalEngine.getRotationCount() % 2 > 0) {
+            strJournalca = rotateCropJournal
+        } else {
+            strJournalca = cropJournal;
+        }
+        var _cparea = strJournalca.split("=")[1].split(",");
+        journalEngine.setCropAreaNotNested(_cparea[0],_cparea[1],_cparea[2],_cparea[3]);
         setUserImageSrc();
     });
 
     //Rotate Image to Left
     $("#counterclockwise").click(function () {
         journalEngine.setRotation("ccw");
+        if(journalEngine.getRotationCount() % 2 > 0) {
+            strJournalca = rotateCropJournal;
+        } else{
+            strJournalca = cropJournal
+        }
+        var _cparea = strJournalca.split("=")[1].split(",");
+        journalEngine.setCropAreaNotNested(_cparea[0],_cparea[1],_cparea[2],_cparea[3]);
         setUserImageSrc();
     });
 
@@ -108,6 +137,7 @@ $(function () {
     });
 
     $("#cropimage").click(function () {
+
         window.open("/imagecrop/index");
 
     });

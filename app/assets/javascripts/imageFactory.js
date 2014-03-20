@@ -174,8 +174,10 @@ imageFactory.prototype.getFinalJournal = function()
                 }else if( pair[1] == "fv" ){
                     flipVertical = "fv" ;
                 }else {
-                    if( flipHorizontal != null ) angle += 180 ; //there is flip so add 180 degrees
-                    if(!isNaN(pair[1]))  {angle = parseInt(angle) + parseInt(pair[1]) +180}  //  This is added to enable throughh old 'crop' option which image is rotated with new flex 'edit-crop' option.
+                    if( flipHorizontal != null )
+                        angle += 180 ; //there is flip so add 180 degrees
+                    if(!isNaN(pair[1]))  {
+                        angle = parseInt(angle) + parseInt(pair[1]) +180}  //  This is added to enable throughh old 'crop' option which image is rotated with new flex 'edit-crop' option.
                     else angle += ROTATION_JOURNALS[pair[1]]  ;
                 }
             }
